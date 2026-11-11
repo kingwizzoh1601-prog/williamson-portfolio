@@ -77,8 +77,8 @@ This project is still under development.
 ## Contact and Social Links
 
 - **GitHub:** [kingwizzoh1601-prog](https://github.com/kingwizzoh1601-prog)
-- **LinkedIn:** Add profile link.
-- **Instagram:** Add profile link.
+- **LinkedIn:** www.linkedin.com/in/king-wizzoh.
+- **Instagram:** https://www.instagram.com/king_wizzoh1601/.
 
 ## Future Improvements
 
