@@ -147,48 +147,92 @@ p {
 
 .hero {
     width: min(90%, var(--container-width));
-    min-height: 650px;
+    min-height: 680px;
     margin-inline: auto;
-    padding: 90px 0;
+    padding: 100px 0;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 60px;
+    gap: 50px;
+
+    position: relative;
 }
+
+/* Staggered entrance: each introduction element appears in sequence */
 
 .hero-content {
     flex: 1;
-    animation: fadeInUp 0.9s ease both;
+}
+
+.hero-content > * {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.hero-content .hero-greeting {
+    animation-delay: 0.2s;
+}
+
+.hero-content h1 {
+    animation-delay: 0.4s;
+}
+
+.hero-content h2 {
+    animation-delay: 0.6s;
+}
+
+.hero-content .hero-description {
+    animation-delay: 0.8s;
+}
+
+.hero-content .hero-tagline {
+    animation-delay: 1s;
+}
+
+.hero-content .hero-buttons {
+    animation-delay: 1.2s;
 }
 
 .hero-greeting {
     color: var(--color-gold);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 700;
-    letter-spacing: 4px;
-    margin-bottom: 20px;
+    letter-spacing: 5px;
+    margin-bottom: 22px;
 }
 
 .hero h1 {
     font-size: clamp(3.5rem, 7vw, 6rem);
     font-weight: 700;
-    margin-bottom: 20px;
+    letter-spacing: -3px;
+    line-height: 1.05;
+    margin-bottom: 25px;
 }
 
 .hero h2 {
     color: var(--color-cream);
-    font-size: clamp(1.5rem, 3vw, 2.3rem);
+    font-size: clamp(1.4rem, 2.8vw, 2.1rem);
     font-weight: 500;
-    line-height: 1.4;
+    line-height: 1.55;
     margin-bottom: 25px;
 }
 
 .hero-description {
-    color: var(--color-gold-light);
+    max-width: 520px;
+    color: var(--color-muted);
     font-size: 1.05rem;
-    letter-spacing: 1px;
-    margin-bottom: 35px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+.hero-tagline {
+    color: var(--color-gold-light);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.8;
+    margin-bottom: 32px;
 }
 
 
@@ -246,10 +290,12 @@ p {
     width: 100%;
     aspect-ratio: 4 / 5;
     object-fit: cover;
+    object-position: center;
 
-    border: 2px solid var(--color-gold);
-    border-radius: 50px;
-    
+    border: 1px solid var(--color-gold);
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(215, 180, 90, 0.12);
+
     animation: float 10s ease-in-out infinite;
 }
 
@@ -1175,4 +1221,56 @@ a:focus-visible {
     .form-group textarea {
         padding: 12px;
     }
+}
+
+.social-links {
+    margin-top: 30px;
+}
+
+.social-links h3 {
+    color: var(--gold);
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    display: inline-block;
+    color: var(--cream);
+    text-decoration: none;
+    margin-right: 18px;
+    margin-bottom: 10px;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    color: var(--gold);
+    transform: translateY(-3px);
+}
+.social-links {
+    margin-top: 30px;
+}
+
+.social-links h3 {
+    color: var(--gold);
+    margin-bottom: 18px;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--cream);
+    text-decoration: none;
+    margin-right: 18px;
+    margin-bottom: 12px;
+    transition: var(--transition);
+}
+
+.social-links a i {
+    font-size: 20px;
+    color: var(--gold);
+}
+
+.social-links a:hover {
+    color: var(--gold);
+    transform: translateY(-3px);
 }
