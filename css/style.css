@@ -253,25 +253,25 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 }
 
 
-/* CONTACT PAGE MAP */
+/* Contact Map */
 
 .contact-map {
     width: 100%;
-    max-width: 100%;
     margin-top: 25px;
-    border: 1px solid var(--color-gold);
+    border: 1px solid rgba(215, 180, 90, 0.25);
     border-radius: 12px;
     overflow: hidden;
+    background: var(--color-surface);
 }
 
 .contact-map iframe {
     display: block;
     width: 100%;
     height: 350px;
-    border: none;
+    border: 0;
 }
 
-/* Responsive map */
+/* Responsive Map */
 
 @media (max-width: 768px) {
     .contact-map iframe {
